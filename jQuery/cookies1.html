@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <title></title>
+
+        <script>
+            function demo(){
+                //alert("body loaded....");
+                if(document.cookie.length != 0){
+                    var nameArray = document.cookie.split("=");
+                    document.bgColor = nameArray[1];
+                    alert(document.cookie);
+                }
+            }
+            function changeColor(){
+                var c = document.getElementById("s1").value;
+
+                if(c != "select"){
+                    document.bgColor = c;
+                    var d = new Date();
+                    d.setHours(24);
+                    document.cookie = 'color='+ c + ';expires=' + d+";";
+                }
+                document.bgColor = c;
+                document.cookie  = "color="+c;
+            }
+        </script>
+    </head>
+
+    <body onload="demo()">
+        <h2>Example of cookies</h2>
+        <select id="s1" onchange="changeColor()">
+            <option value="select">select</option>
+            <option value="red">red</option>
+            <option value="green">green</option>
+            <option value="blue">blue</option>
+        </select>
+    </body>
+</html>

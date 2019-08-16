@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Form Validation using javascript</title>
+</head>
+<body>
+	<form>
+		<label><b>Username:</b></label>
+		<input type="text" placeholder="username...." id="username"><br>
+		<label><b>Password:</b></label>
+		<input type="Password" placeholder="Password...." id="pass"><br>
+		<button id="login" onclick="validate()">Log in</button>
+	</form>
+
+	<script type="text/javascript">
+		var userid="admin";
+		var pass="admin"; 
+		function validate(){
+			if(document.getElementById("username").value===userid && document.getElementById("pass").value===pass){
+				alert("Log in success");
+			}
+			else{
+				alert("Invalide id or Password")
+			}
+		}
+	</script>
+</body>
+</html>

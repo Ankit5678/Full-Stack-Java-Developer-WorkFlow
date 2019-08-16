@@ -1,0 +1,10 @@
+"use strict";
+var a = 10;
+var b = "IBM INDIA";
+a = 11.11;
+var c = true;
+console.log(a);
+console.log(b);
+console.log(c);
+let prop1 = "Bangalore";
+console.log(prop1);

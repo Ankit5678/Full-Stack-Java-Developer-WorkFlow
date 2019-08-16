@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <style>
+            div{
+                border: solid black 5pt;
+                padding: 20pt;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="d1">
+            First Div.
+            <div id="d2">
+                Second Div
+                <div id="d3">
+                    Third Div
+                    <div id="d4">Fourth Div</div>
+                </div>
+            </div>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script>
+            var allDivs = document.getElementsByTagName("div");
+            for(var i=0;i<allDivs.length;i++){
+                allDivs[i].onclick = function(event){
+                    alert(this.getAttribute("id")+"Generated Event");
+                    this.style.boardColor="blue";
+                    event.stopPropagation();
+                }
+            }
+        </script>
+    </body>
+</html>

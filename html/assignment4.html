@@ -1,0 +1,231 @@
+<html>
+    <head>
+        <title>
+            IBM India
+        </title>
+        <style>
+            header{
+                padding:  20px 0;
+                position: absolute;
+                top: 0;
+                width: 100%;
+               /* height: 10%;*/
+                background-color: black;
+                float: left;
+                align-items: center;
+                margin: 0 auto;
+            }
+            header ul{
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                align-items: center;
+            }
+            header ul li{
+                display: inline;
+            }
+            header ul li a{
+                text-decoration: none;
+                vertical-align: middle;
+                color: #fff;
+                font-size: 20px;
+                padding: 10px 20px;
+                transition: .5s all ease;
+            }
+            header ul li a:hover{
+                border-bottom: 3px solid #fff;
+                background-color: gray;
+                vertical-align: baseline;
+            }
+            #search_box{
+                float:right;
+                margin-right: 0px;
+            }
+            #search_b{
+                float:right;
+                margin-right: 50px;
+            }
+            #login{
+                float:right;
+                margin-right: 30px;
+            }
+            #register{
+                float:right;
+                margin-right:50px;
+            }
+            #logo{
+                padding-left: 20px;
+                padding-bottom: 20px;
+            }
+            #slider{
+		        margin-top: 10%;
+		        padding: 0;
+                margin-left:0;
+                overflow: hidden;
+	        }
+	        #slider ul li img{
+		        width: 1500px;
+		        height: 720px;
+	        }
+	        #slider ul .item{
+		        list-style-type: none;
+		        float: top;
+		        height: 100px;
+		        overflow: hidden;
+		        transition: 2s all ease;
+	        }
+	        #slider ul .item:hover{
+		        height: 720px;
+	        }
+            #innovations{
+                width:100%;
+                height:300px;
+                padding-left:30px;
+                background-color:burlywood;
+            }
+            .inno{
+                float: left;
+                width:30%;
+                height:90%;
+                display: inline;
+                border: 5px solid black;
+                margin: 20px;
+                font-size: 40px;
+                background-color:blueviolet;
+                text-align: center;
+            }
+            footer{
+                margin-top: 400px;
+                width: 100%;
+                height:400px;
+                background-color: coral;
+            }
+            .foo{
+                float:left;
+                width:22%;
+                height:90%;
+                display:inline;
+                border: 1px solid black;
+                margin:20px;
+                background-color: crimson;
+                text-align: center;
+            }
+            .foo ul{
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+            }
+            footer ul li a{
+                text-decoration: none;
+                vertical-align: middle;
+                color: #fff;
+                font-size: 20px;
+                transition: .5s all ease;
+            }
+            footer ul li a:hover{
+                border-bottom: 3px solid #fff;
+                background-color: gray;
+                vertical-align: baseline;
+            }
+            .newsletter{
+                width: 100%;
+                display: inline;
+                background-color: chocolate;
+            }
+            #newsletter{
+                float: left;
+                margin-top:100px;
+                margin-left: 400px;
+                padding-right: 100px;
+                width: 400px;
+                height: 50px;
+            }
+            #subscribe{
+                float:left;
+                margin-left:50px;
+                margin-top:100px;
+                width:150px;
+                height:50px;
+                background-color:darkcyan;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+                <a href="assignment4.html"><img src="images/ibm_logo.jpg" id="logo"></a>
+                <ul>
+                        <li><a href="#">Markateplace</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Developers</a></li>
+                        <li><a href="#">Support</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><input type="submit" value="Log in" id="login"></li>
+                        <li><input type="submit" value="Register" id="register"></li>
+                        <li><input type="submit" value="search" id="search_b"></li>
+                        <li><input type="text" placeholder="Search..." id="search_box"></li>
+                </ul>
+        </header>
+        <div id="slider">
+                <ul>
+                    <li class="item"><img src="images/slid1.jpg" alt="Image not found"></li>
+                    <li class="item"><img src="images/slid2.jpg" alt="Image not found"></li>
+                    <li class="item"><img src="images/slid3.jpg" alt="Image not found"></li>
+                    <li class="item"><img src="images/slid4.jpg" alt="Image not found"></li>
+                    <li class="item"><img src="images/slid5.jpg" alt="Image not found"></li>
+                </ul>
+        </div>
+        <div id="innovations">
+            <div class="inno">
+                    Stay a step ahead of cyber threats IBM QRadar.
+            </div>
+            <div class="inno">
+                    Godrej Group teamed with IBM to embark on cloud journey to consolidate IT infrastructure.
+            </div>
+            <div class="inno">
+                    Deep-dive training in IBM LinuxONE, Power Systems and Storage at TechU in Bangkok, 7-9 August.
+            </div>
+        </div>
+        <div class="newsletter">
+            <input type="email" id="newsletter">
+            <input type="submit" id="subscribe">
+        </div>
+        <footer>
+            <div class="foo">
+                <h2>Discover</h2>
+                <ul id="discover">
+                    <li class="discover"><a href="#">Markateplace</a></li>
+                    <li class="discover"><a href="#">Trials</a></li>
+                    <li class="discover"><a href="#">Services</a></li>
+                    <li class="discover"><a href="#">Industries</a></li>
+                    <li class="discover"><a href="#">IBM discount</a></li>
+                    <li class="discover"><a href="#">Case Studies</a></li>
+                </ul>
+            </div>
+            <div class="foo">
+                <h2>Information For...</h2>
+                <ul>
+                    <li class="info"><a href="#">Developers</a></li>
+                    <li class="info"><a href="#">Business Partner</a></li>
+                </ul>
+            </div>
+            <div class="foo">
+                <h2>Connect with us</h2>
+                <ul>
+                    <li><a href="#">Support</a></li>
+                    <li><a href="#">Find a Business Report</a></li>
+                    <li><a href="#">Find a Partner</a></li>
+                </ul>
+            </div>
+            <div class="foo">
+                <h2>About IBM</h2>
+                <ul>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Latest news</a></li>
+                    <li><a href="#">Investor relations</a></li>
+                    <li><a href="#">Corporate responsibility</a></li>
+                    <li><a href="#">About IBM</a></li>
+                </ul>
+            </div>
+        </footer>
+    </body>
+</html>

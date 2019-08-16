@@ -1,0 +1,26 @@
+function Customer(reg, name, type, contact, address){
+    this.regNo = reg;
+    this.name = name;
+    this.type = type;
+    this.contact = contact;
+    this.address = address;
+}
+function Contact(mobile, phno, email){
+    this.mobile = reg;
+    this.name = name;
+    this.type = type;
+}
+function Address(reg, name, type){
+    this.regNo = reg;
+    this.name = name;
+    this.type = type;
+}
+
+
+Customer.prototype.getRegNo = function(){
+
+}
+var c1 = new Customer("", "", "");
+var c1 = new Customer("", "", "");
+
+

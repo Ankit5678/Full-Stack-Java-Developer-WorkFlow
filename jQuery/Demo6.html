@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $('#container').children().css("border","solid black 2px").css("padding","3px");
+                $('#color').change(function(){
+                    var value = $(this).val();
+                    $("#container").children().first().css('color',value);
+                    $("#container").children().first().next().css('background-color',value).css('color','white');
+                });
+            });
+        
+        </script>
+    </head>
+
+    <body>
+        <div id="container">
+            <p>Change my color</p>
+            <p>Change my background-color</p>
+            <select id="color">
+                <option value="black">select</option>
+                <option value="violet">violet</option>
+                <option value="green">Green</option>
+                <option value="blue">Blue</option>
+            </select>
+        </div>
+    </body>
+</html>

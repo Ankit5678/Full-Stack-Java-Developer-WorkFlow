@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <style>
+            #main{
+                background-color: cornsilk;
+                border-radius: 25px;
+                padding: 20px;
+                text-align: center;
+            }
+            body{
+                align: center;
+            }
+            #sub{
+                display: none;
+            }
+            #links{
+                height: 20px;
+            }
+        </style>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script>
+            window.jQuery || document.write("<script src='jquery-3.4.1.slim.min.js'><\/script>");
+        </script>
+        <script>
+            $(document).ready(function(){
+                $("#main").slideDown('slow');
+                $("#main").hover(function(){
+                    $("#sub").slideDown();
+                });
+                $("#home").hover(function(){
+                    $("#links").html("Home related info");
+                });
+                $("#services").hover(function(){
+                    $("#links").html("service related info");
+                });
+                $("#contact").hover(function(){
+                    $("#links").html("contact related info");
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div id="main" style="display: none">
+            <h2>Main content</h2>
+            <div id="sub">
+                <a href="#" id="home">home</a>/
+                <a href="#" id="services">services</a>/
+                <a href="#" id="contact">contacts</a>/
+            </div>
+            <div id="links"></div>
+        </div>
+    </body>
+</html>

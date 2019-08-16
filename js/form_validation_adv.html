@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Form Validation</title>
+</head>
+<body>
+		<label>First Name</label><br>
+		<input type="text" name="Fname" id="Fname" placeholder="Enter First Name"><p id="Fout"></p><br>
+		<label>Last Name</label><br>
+		<input type="text" name="Lname" id="Lname" placeholder="Enter Last Name"><p id="Lout"></p><br>
+		<label>Email</label><br>
+		<input type="text" name="Ename" id="Ename" placeholder="Enter Email-id"><p id="Eout"></p><br>
+		<label>Password</label><br>
+		<input type="Password" name="Password" id="password" placeholder="Enter Password"><br>
+		<label>Confirm Password</label><br>
+		<input type="Password" name="Confirm Password" id="confirm_password" placeholder="Enter Password Again"><br><br>
+		<p id="passout"></p>
+		<p id="password3"></p>
+
+		<label>Gender</label><br>
+			<input type="radio" name="gender" value="male"> Male &nbsp;&nbsp;
+			<input type="radio" name="gender" value="female"> Female &nbsp;&nbsp;
+			<input type="radio" name="gender" value="other"> Other <br><br>
+
+
+
+		<label>City</label><br>
+		<select >
+			<option>Choose City</option>
+			<option>chd</option>
+			<option>Bengalore</option>
+			<option>Delhi</option>
+			<option>Mumbai</option>
+		</select><br><br><br>
+
+		<button onclick="validateEmail(),checkpass(),namecheck()" >SUBMIT</button>
+
+
+
+<script type="text/javascript">
+
+	function validateEmail() {
+    	var re = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    	if(re.test(document.getElementById("Ename").value)){
+    		document.getElementById('Eout').style.color = 'green';
+    		document.getElementById("Eout").innerHTML = "correct e-mail"
+    	}
+    	else{
+    		document.getElementById('Eout').style.color = 'red';
+    		document.getElementById("Eout").innerHTML = "Enter e-mail"
+    	}
+	}
+
+	function checkpass() {
+
+		var strongRegex = new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})");
+		var mediumRegex = new RegExp("^(((?=.*[a-z])(?=.*[A-Z]))|((?=.*[a-z])(?=.*[0-9]))|((?=.*[A-Z])(?=.*[0-9])))(?=.{6,})");
+		if(strongRegex.test(document.getElementById('password'))){
+			document.getElementById('password3').style.color = 'green';
+    		document.getElementById('password3').innerHTML = 'Strong Password';
+		}
+
+		if(mediumRegex.test(document.getElementById('password'))){
+			document.getElementById('password3').style.color = '#F8B21C';
+    		document.getElementById('password3').innerHTML = 'medium Password';
+		}
+
+		if (document.getElementById('password').value ==
+			document.getElementById('confirm_password').value) {
+    		document.getElementById('passout').style.color = 'green';
+    		document.getElementById('passout').innerHTML = 'matching';
+		} 
+		else {
+    		document.getElementById('passout').style.color = 'red';
+    		document.getElementById('passout').innerHTML = 'not matching';
+		}
+	}
+
+	function namecheck(){
+		if(document.getElementById("Fname").value==""){
+			document.getElementById('Fout').style.color = 'red';
+			document.getElementById("Fout").innerHTML = "Enter name"
+		}
+
+		if(document.getElementById("Lname").value==""){
+			document.getElementById('Lout').style.color = 'red';
+			document.getElementById("Lout").innerHTML = "Enter name"
+		}
+	}
+
+</script>
+</body>
+</html>

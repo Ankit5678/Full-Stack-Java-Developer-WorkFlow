@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Moving on with html
+        </title>
+    </head>
+    <body>
+        <p>
+            This is a paragraph
+        </p>
+        <div style="color:#fff; background-color: blue;width: 200px;height: 150px;"><!--Outer container-->
+            Hi there we are just<span style="background-color: #fff;color:#000;"><!--'SPAN' is a inline container-->Starting with</span>FSD.
+        </div>
+        <form action="process.html">
+            <!--
+                &nbsp-- used for putting space with in input fields
+            -->
+            <!--
+                INPUT attributs:
+
+
+                FOR attributes:
+
+
+                LABLE attributes:
+
+
+            -->
+            <h1>Working with user Input</h1>
+            <hr>
+            <for name="username">Enter your name:</for><input type="text"><br>&nbsp;&nbsp;&nbsp;
+            <for name="address">Enter your address:</for><input type="text"><br>
+            <label for="userName">Enter Username here:</label><input type="text" id="userName"><br>
+            <label for="userAddress">Enter address here</label><input type="text" id="userAddress"><br>
+            <label for="userN">Enter name:</label><input type="text" pattern="[A-Z]{5}" required placeholder="Your name" id="userN"><br>
+            <lable for="userA">Enter address:</lable><input type="text" placeholder="Your Address" id="userA"><br>
+            <label for="userPass">Enter Password</label><input type="password" placeholder="Your Password"><br>
+            <label for="userEmail">Enter e-mail:</label><input type="email" required="required" placeholder="E-mail"><br>
+            Select qualification:<br>
+            <input type="checkbox">10th<br>
+            <input type="checkbox">12th<br>
+            <input type="checkbox">Graduation
+            <br>
+            <label for="userR">Enter regd. no.:</label><input type="number" placeholder="regd no." id="userR"><br>
+            select gender:
+            <input type="radio" name="userG">Male<br>
+            <input type="radio" name="userG">Female<br>
+            <select><!--multiple attribute can be used for selecing multiple options from drop down menu-->
+                <option>Enter country</option>
+                <option>India</option>
+                <option>US</option>
+                <option>UK</option>
+            </select>
+            <input type="submit" value="submit">
+
+        </form>
+    </body>
+</html>   

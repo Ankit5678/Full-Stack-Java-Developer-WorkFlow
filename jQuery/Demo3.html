@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script>
+            window.jQuery || document.write("<script src='jquery-3.4.1.slim.min.js'><\/script>");
+        </script>
+
+        <script>
+            $(document).ready(function(){
+                $("#list").hide();
+                $("#lap").hover(function(){
+                    var ele = $("#laptops").html();
+                    $("#details").html(ele);
+                });
+
+                $("#mob").hover(function(){
+                    var ele = $("#mobiles").html();
+                    $("#details").html(ele);
+                });
+
+                $("#cam").hover(function(){
+                    var ele = $("#camera").html();
+                    $("#details").html(ele);
+                });
+            });
+        </script>
+        <style>
+            #list{
+                display: none;
+            }
+        </style>
+    </head>
+
+    <body>
+        <a href="#" id="mob">mobiles</a> / <a href="#" id="lap">laptop</a> / <a href="#" id="cam">Cameras</a>
+        <ol id="details"></ol>
+            <div id="list">
+                <ol id="laptops">
+                    <li>Acer</li>  <li>Lenovo</li>   <li>Dell</li>
+                </ol>
+
+                <ol id="mobiles">
+                    <li>Apple</li>  <li>moto</li>   <li>pixel</li>
+                </ol>
+
+                <ol id="camera">
+                    <li>canon</li>  <li>nikon</li>   <li>samsung</li>
+                </ol>
+            </div>
+        
+    </body>
+</html>

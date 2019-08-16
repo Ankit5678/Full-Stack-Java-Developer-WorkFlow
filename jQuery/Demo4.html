@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $("input").blur(function(){
+                    var value = $(this).val();
+                    if(value.length <= 3){
+                        $(this).next().html('can not leave this field blank');
+                        $(this).next().css('color','red');
+                        $(this).nextAll().attr('disabled',true);
+                    }
+                    else{
+                        $(this).next().html('');
+                        $(this).nextAll().attr('disabled',false);
+                    }
+                });
+            })
+        </script>
+    </head>
+
+    <body>
+        <form>
+            <input type="text"><span></span><br>
+            <input type="text"><span></span><br>
+            <input type="text"><span></span><br>
+            <input type="radio">
+        </form>
+    </body>
+</html>

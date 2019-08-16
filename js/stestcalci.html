@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Form Validation using javascript</title>
+</head>
+<body>
+
+
+	
+		<label><b>Username:</b></label>
+		<input type="text" id="x"><br>
+		<label><b>Password:</b></label>
+		<input type="text" id="y"><br><br/>
+		<button onclick="calci('+')">+</button>&nbsp
+		<button onclick="calci('-')">-</button>&nbsp
+		<button onclick="calci('*')">*</button>&nbsp
+		<button onclick="calci('/')">/</button>&nbsp
+		<button onclick="calci('%')">%</button>
+		<p id="r"></p>
+	
+		<script >
+		 
+		function calci(op){
+			var x = document.getElementById("x").value;
+			var y = document.getElementById("y").value;
+
+			var r = 0;
+			if(op == "+"){
+				r = eval(x) + eval(y);
+			} else if(op == "-"){
+				r = eval(x) - eval(y);
+			} else if(op == "*"){
+				r = eval(x) * eval(y);
+			} else if(op == "/"){
+				r = eval(x) / eval(y);
+			} else if(op == ""){
+				//r = mod(eval(x),  eval(y));
+			} 
+			//alert("Result : " + r);
+			document.getElementById("r").innerHTML = r;
+		}
+
+		
+	</script>
+
+
+
+</body>
+</html>

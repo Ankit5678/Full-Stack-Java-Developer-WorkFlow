@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script>
+                window.jQuery || document.write("<script src='jquery-3.4.1.slim.min.js'><\/script>");
+        </script>
+        <script>
+            $().ready(function(){
+                $("#list").change(function(){
+                    var content = $(this).val();
+                    $(course).text("course:  "+content);
+                });
+            });
+        </script>
+    </head>
+
+    <body>
+        <form action="#">
+            <select id="list">
+                <option value="Bachelor of Engineering">BE</option>
+                <option value="Bachelor of Commerce">BCom</option>
+            </select>
+            <p id="course"></p>
+        </form>
+    </body>
+</html>

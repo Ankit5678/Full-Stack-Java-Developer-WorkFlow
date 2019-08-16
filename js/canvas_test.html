@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Canvas demo</title>
+</head>
+<body>
+	<canvas id="c1" width="300" height="200"></canvas>
+	<script type="text/javascript">
+		var canvas = document.getElementById("c1");
+		var context = canvas.getContext("2d");
+		context.font = '20pt TimesNewRoman';
+		context.fillStyle='green';
+		context.fillText('Welcome',10,100);
+	</script>
+</body>
+</html>

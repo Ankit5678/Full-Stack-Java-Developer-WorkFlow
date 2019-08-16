@@ -1,0 +1,11 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const demo_module_01_1 = require("./demo_module_01");
+console.log("this id module 02");
+console.log("Module_01 s1   " + demo_module_01_1.s1_exp);
+console.log("Module_01 s2   " + demo_module_01_1.s2_exp);
+console.log(`${demo_module_01_1.s1_exp}`);
+console.log(`${demo_module_01_1.s2_exp}`);
+demo_module_01_1.fun("ankit");
+let e1_imp = new demo_module_01_1.Employee(1, "sam");
+e1_imp.display();

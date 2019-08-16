@@ -1,0 +1,7 @@
+key value pair collectively make properties
+properties
+selecters
+three ways to put css in webpage--
+    >inline -- using style attribute
+    >Internal css -- using style tag
+    >External css -- different css file

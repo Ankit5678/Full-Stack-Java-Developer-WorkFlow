@@ -1,0 +1,48 @@
+<html>
+    <head>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                //$("#container1").children().first().css('font-family','consolas').css('color','blue').css('font-size','16pt');
+                $("#myDiv").siblings().css('color','red');
+                $("#myDiv").children().css('color','blue');
+                $("#myDiv").children().first().css('color','green');
+                $("#myDiv").children().last().css('color','violet');
+                $("#myDiv").prev().css('background-color','yellow');
+                $("#myDiv").find("ol").css('font-family','consolas');
+                $("#myDiv").find("li").css('list-style-type','square');
+                $("#main-container").children().css('border','solid red 3px').css('padding','5px').css('margin','2px');
+                //$("myDiv").parentUntil("#main-container").css('border','solid black 2px').css('padding','3px');
+            })    
+        </script>
+    </head>
+
+    <body>
+        <div id="main-container">
+            <div id="container1">
+                <div>
+                    <p>
+                        This is first paragraph.
+                    </p>
+                </div>
+
+                <div id="myDiv">
+                    <p>List all accessories</p>
+                    <ol>
+                        <li>Laptop</li>  <li>Mobile</li>  <li>Headphone</li>
+                    </ol>
+                    <p>List over here.</p>
+                </div>
+
+                <div>
+                    <p>Last para</p>
+                </div>
+            </div>
+
+            <div id="container2">
+                <h2>This is the other part</h2>
+                <p>some content here</p>
+            </div>
+        </div>
+    </body>
+</html>
