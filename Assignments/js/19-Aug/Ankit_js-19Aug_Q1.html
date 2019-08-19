@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title></title>
+    </head>
+
+    <body>
+        <input type="number" id="num" placeholder="enter a nubmer">
+        <button onclick="check()">check</button>
+
+        <script>
+            function check(){
+                var max = 15;
+                var min = 1;
+                var random = Math.random()*(max - min)+min;
+                console.log(Math.floor(random));
+                var i = document.getElementById("num").value;
+                console.log(i);
+                if(i>=1 && i<=15){
+                    if(i == Math.floor(random)){
+                        alert("right");
+                    }
+                    else{
+                        alert("wrong");
+                    }
+                }
+                else{
+                    alert("enter a number i range 1 to 15");
+                }
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title></title>
+        <script>
+            function upperornot(){
+                var str = document.getElementById("in").value;
+                //console.log(s);
+                var i = document.getElementById("index").value;
+                s = str.charAt(i-1);
+                s1 = s.toUpperCase();
+                if(s === s1){
+                    console.log("in upper case");
+                }
+                else{
+                    console.log("not in upper case");
+                }
+            }
+        </script>
+    </head>
+
+    <body>
+        <input type="text" id="in"><br>
+        <input type="text" id="index"><br>
+        <button onclick="upperornot()">click</button>
+    </body>
+</html>

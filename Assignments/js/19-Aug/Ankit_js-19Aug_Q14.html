@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title></title>
+        <script>
+            function matching(){
+                var s = document.getElementById("s").value;
+                var sub = document.getElementById("sub").value;
+                var re = new RegExp(sub,"g");
+                var count=[];
+                if(s.match(re)){
+                    count = s.match(re);
+                }
+                var counter=0;
+                if(count.length>0){
+                    for(var i=0;i<sub.length;i++){
+                        if(s.charAt(i) === sub.charAt(i)){
+                            counter++;
+                        }
+                    }
+                }
+                if(counter == sub.length){
+                    console.log("matched");
+                }
+                else{
+                    console.log("not match");
+                }
+            }
+        </script>
+    </head>
+
+    <body>
+        <input type="text" id="s" placeholder="main string">
+        <input type="text" id="sub" placeholder="substring">
+        <button onclick="matching()">click</button>
+    </body>
+</html>

@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title></title>
+        <script>
+            function nonrep(){
+                var s = document.getElementById("in").value;
+                //console.log(s);
+                var arr = new Array();
+                for(var i=0;i<s.length;i++){
+                    arr.push(s.charAt(i));
+                }
+                //console.log(arr);
+                arr.sort();
+                //console.log(arr);
+                var arr1 = new Array();
+                for(var i=0;i<s.length;i++){
+                    if(arr[i+1] != arr[i]){
+                        arr1.push(arr[i]);
+                    }
+                }
+                console.log(arr1);
+            }
+        </script>
+    </head>
+
+    <body>
+        <input type="text" id="in"><br>
+        <button onclick="nonrep()">click</button>
+    </body>
+</html>

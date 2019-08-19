@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <title></title>
+        <script>
+            function sysdate(){
+                var d = new Date();
+                console.log(d);
+                var da = d.getDay();
+                var h = d.getHours();
+                var m = d.getMinutes();
+                var s = d.getSeconds();
+                var ampm = "AM";
+                switch(da){
+                    case 1:
+                        day = "Monday";
+                        break;
+                    case 2:
+                        day = " Tuesday";
+                        break;
+                    case 3:
+                        day="Wednesday";
+                        break;
+                    case 4:
+                        day="Thursday";
+                        break;
+                    case 5:
+                        day="Friday";
+                        break;
+                    case 6:
+                        day="Saturday";
+                        break;
+                    case 7:
+                        day="Sunday";
+                        break;
+                    default:
+                        break;
+                }
+                if(h>=12){
+                    ampm = "PM";
+                }
+                else{
+                    ampm = "AM";
+                }
+                console.log("Today  :"+day);
+                console.log("Time is   :"+h+" : "+m+" : "+s+"  "+ampm);
+            }
+        </script>
+    </head>
+
+    <body>
+        <!-- <input type="text" id="in"><br> -->
+        <button onclick="sysdate()">click</button>
+    </body>
+</html>

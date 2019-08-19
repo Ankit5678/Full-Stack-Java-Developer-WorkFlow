@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <script>
+            function upper(s){
+                console.log(s);
+                arr = new Array();
+                arr1 = new Array();
+                arr = s.split(" ");
+                console.log(arr);
+                for(var i=0;i<arr.length;i++){
+                    var s1=arr[i];
+                    console.log(s1);
+                    s2=s1.charAt(0).toUpperCase();
+                    arr1.push(s2+s1.slice(1));
+                }
+                console.log(arr1);
+            }    
+        </script>
+    </head>
+    <body>
+        <input type="text" id="in">
+        <button onclick="upper(document.getElementById('in').value)">click</button>
+    </body>
+</html>

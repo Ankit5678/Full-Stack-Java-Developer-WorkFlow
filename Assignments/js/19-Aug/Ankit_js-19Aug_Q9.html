@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <title></title>
+        <script>
+            function nonrep(){
+                //var s = document.getElementById("in").value;
+                //console.log(s);
+                var arr = [1,1,2,3,3,4,4,5,5];
+                var arr1 = [6,6,1,7,7,7,8,8,9,9,0,0];
+                var arr2 = new Array();
+                var arr3 = new Array();
+                // for(var i=0;i<s.length;i++){
+                //     arr.push(s.charAt(i));
+                // }
+                //console.log(arr);
+                arr.sort();
+                arr1.sort();
+                //console.log(arr);
+                for(var i=0;i<arr.length;i++){
+                    if(arr[i+1] != arr[i]){
+                        arr2.push(arr[i]);
+                    }
+                }
+
+                for(var i=0;i<arr1.length;i++){
+                    if(arr1[i+1] != arr1[i]){
+                        arr2.push(arr1[i]);
+                    }
+                }
+                arr2.sort();
+                for(var i=0;i<arr2.length;i++){
+                    if(arr2[i+1] != arr2[i]){
+                        arr3.push(arr2[i]);
+                    }
+                }
+                arr3.sort();
+                console.log(arr2);
+                console.log(arr3);
+            }
+        </script>
+    </head>
+
+    <body>
+        <!-- <input type="text" id="in"><br> -->
+        <button onclick="nonrep()">click</button>
+    </body>
+</html>
