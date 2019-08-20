@@ -1,0 +1,20 @@
+<html>
+    <head>
+	    <title>Take input from user and create n number of text boxes dynamically</title>
+    </head>
+    <body>
+        <p id="screens"></p>  
+        <input type="text" id="str">
+        <button type="button" onclick=" return myfunction()">Click Me!</button>
+        <script type="text/javascript">
+	        function myfunction(){
+	            var p=document.getElementById("str").value;	
+                var s= "";
+                for(var i = 0; i < p; i++) {
+                    s+= '<input type="text" name="Fname"><br>'; //Create one textbox as HTML
+                }
+            document.getElementById("screens").innerHTML=s;
+	        }
+        </script>
+    </body>
+</html>

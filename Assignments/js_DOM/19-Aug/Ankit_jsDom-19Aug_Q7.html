@@ -1,0 +1,23 @@
+<html>
+    <head>
+	    <title>Take a value from user and remove the option from combo dropdown with that value</title>
+    </head>
+
+    <body>
+        <select id="list">
+            <option value="option1">option1</option>
+            <option value="option2">option2</option>
+            <option value="option3">Option3</option>
+            <option value="option4">option4</option>
+        </select>
+        <input type="text" id="str">
+        <button type="button" onclick=" return myfunction()">Click Me!</button>
+        <script type="text/javascript">
+	        function myfunction(){
+	            var p=document.getElementById("str").value;	
+                var s=document.getElementById("list") ;
+                s.remove(p);
+	        }
+        </script>
+    </body>
+</html>
