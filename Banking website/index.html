@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: black;
+}
+
+* {
+  box-sizing: border-box;
+
+}
+
+/* Add padding to containers */
+.container {
+  padding: 16px;
+  background-color: white;
+ 
+}
+label{
+    width: 200px;
+    display: inline-block;
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password], input[type=tel], input[type=number],input[type=date], select {
+  width: 20%;
+  padding: 15px;
+  margin: 5px 0 22px 0px;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus, input[type=tel]:focus, input[type=number]:focus,input[type=date]:focus, select:focus{
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Overwrite default styles of hr */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* Set a style for the submit button */
+.registerbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.registerbtn:hover {
+  opacity: 1;
+}
+
+/* Add a blue text color to links */
+a {
+  color: dodgerblue;
+}
+
+/* Set a grey background color and center the text of the "sign in" section */
+.signin {
+  background-color: #f1f1f1;
+  text-align: center;
+}
+</style>
+</head>
+<body>
+
+<form>
+  <div class="container">
+    <h1>Register</h1>
+    <p>Please fill in this form to create an account.</p>
+    <hr>
+
+    <label for="Title"><b>Title  </b></label>
+    <select>
+        <option value="Title">Title</option>
+        <option value="Mr">Mr.</option>
+        <option value="Ns">Ms.</option>
+        <option value="Mrs">Mrs.</option>
+     </select><br>
+
+    <label for="fName"><b>Name</b></label>
+    <input type="text" placeholder="Enter First Name" name="fName" required>
+    <input type="text" placeholder="Enter Last Name" name="lName" required><br>
+
+    <label for="DOB"><b>Date Of Birth</b></label>
+    <input type="date" placeholder="Enter DOB" name="DOB" required><br>
+
+    <label for="maritalStatus"><b>Marital Status</b></label><br>
+    <input type="radio" name="gender" value="male" > Male<br>
+    <input type="radio" name="gender" value="female"> Female<br>
+    <input type="radio" name="gender" value="other"> Other<br><br>
+    
+
+    <label for="email" ><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" id="Ename" name="email" required onchange="validateEmail()"><br>
+    <p id="Eout"></p><br>
+
+    <label for="phone"><b>Phone</b></label>
+    <input type="tel" placeholder="Enter Phone No" name="phone" required><br>
+
+    <label for="address"><b><Address>Address</Address></b></label>
+    <input type="text" placeholder="Street Adress" name="adress1" required ><br>
+    <label></label><input type="text" placeholder="city" name="city" required>
+    <input type="text" placeholder="State" name="state" required><br>
+    <label></label><input type="number" placeholder="pincode" name="pincode" required><br>
+
+    <label for="pass" ><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" id="password" name="password" required><br>
+    <p id="password3"></p><br>
+
+    <label for="rePass" ><b>Retype Password</b></label>
+    <input type="password" placeholder="Retype Password" id="confirm_password" name="password" required onkeyup="checkpass()"><br>
+    <p id="passout"></p><br>
+
+    
+    <hr>
+    <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+
+    <button type="submit" class="registerbtn" onclick="registerIsValid()">Register</button>
+  </div>
+  
+  <div class="container signin">
+    <p>Already have an account? <a href="#">Sign in</a>.</p>
+  </div>
+</form>
+
+</body>
+
+<script type="text/javascript">
+    var c=0;
+
+	function validateEmail() {
+    	var re = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    	if(re.test(document.getElementById("Ename").value)){
+    		document.getElementById('Eout').style.color = 'green';
+    		document.getElementById("Eout").innerHTML = "correct e-mail"
+    	}
+    	else{
+    		document.getElementById('Eout').style.color = 'red';
+    		document.getElementById("Eout").innerHTML = "Enter e-mail"
+    	}
+	}
+
+	function checkpass() {
+
+		var strongRegex = new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})");
+        var mediumRegex = new RegExp("^(((?=.*[a-z])(?=.*[A-Z]))|((?=.*[a-z])(?=.*[0-9]))|((?=.*[A-Z])(?=.*[0-9])))(?=.{6,})");
+        
+		if(strongRegex.test(document.getElementById('password'))){
+			document.getElementById('password3').style.color = 'green';
+            document.getElementById('password3').innerHTML = 'Strong Password';
+        
+		}
+
+		if(mediumRegex.test(document.getElementById('password'))){
+			document.getElementById('password3').style.color = '#F8B21C';
+            document.getElementById('password3').innerHTML = 'medium Password';
+        
+		}
+
+		if (document.getElementById('password').value ==
+			document.getElementById('confirm_password').value) {
+    		document.getElementById('passout').style.color = 'green';
+            document.getElementById('passout').innerHTML = 'matching';
+            c=1
+		} 
+		else {
+    		document.getElementById('passout').style.color = 'red';
+    		document.getElementById('passout').innerHTML = 'not matching';
+        }
+        
+	}
+    function registerIsValid(){
+        if(c==1){
+             window.open("SuccessfulRegistration.html");
+        }
+    }
+	
+
+</script>
+
+
+
+</html>

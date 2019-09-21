@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript" src="Table.js"></script>
+<style>
+
+/* *************DROPDOWN******************************* */
+.btn {
+  background-color: rgb(214, 193, 76);
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+/* **************************POPUPBOX******************************* */
+
+#cm-popup{
+   display:none;
+   box-shadow: 0 0 10px #888888;
+   position:fixed;
+   left:50%;
+   transform:translateX(-50%);
+   width:75%;
+   height:500px;
+   padding: 20px;
+}
+
+
+
+
+
+
+
+</style>
+</head>
+<body>
+
+<!-- <div >
+        <a href="#" onclick="document.getElementById('cm-popup').style.display='block'">Class A</a>
+
+</div> -->
+
+
+
+<div id="cm-popup"> 
+        <center>
+            <h1>Congrats!!</h1>
+            <h2>Succesfull Login</h2>
+            <p>You are Succesfully registered and now can login in further to access the various activities....</p>
+            <button type="submit" id="btn" class="Login" >Login</button>
+    
+        </center>
+    <div style="padding:2%;overflow:hidden;">
+</div>
+
+
+
+
+</body>
+<script>
+    window.onload=function(){
+        document.getElementById('cm-popup').style.display='block'
+    }
+</script>
+</html>
