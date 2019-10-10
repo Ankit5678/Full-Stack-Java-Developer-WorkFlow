@@ -1,0 +1,72 @@
+<ul class="nav nav-tabs" id="myTab" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active" id="databinding-tab" data-toggle="tab" href="#databinding" role="tab"
+            aria-controls="databinding" aria-selected="true">Databinding</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="directives-tab" data-toggle="tab" href="#directives" role="tab"
+            aria-controls="directives" aria-selected="false">Directives</a>
+    </li>
+</ul>
+<div class="tab-content" id="myTabContent">
+    <div class="tab-pane fade show active" id="databinding" role="tabpanel" aria-labelledby="databinding-tab">
+        <h1>Data Binding</h1>
+        <h2>String Interpolation</h2>
+        <h3>App name is {{appname}}</h3>
+        <h3>age is {{age}}</h3>
+        <h3>{{skillList[0]}}</h3>
+        <h3>{{getAge()}}</h3>
+        <hr>
+
+
+        <h2>Property Binding</h2>
+        <div class="redText">
+            This is simple css class.
+        </div>
+        <div [class]="redText">
+            This will not work as there is no such variables
+        </div>
+        <div [ngClass]="{'redText': isLoggedIn}">
+            This is using ngClass.
+        </div>
+        <div [ngClass]="{'redText': !isLoggedIn, 'greenText': isLoggedIn}">
+            This is using multiple ngClasses.
+        </div>
+        <hr>
+
+        <!-- Style Binding -->
+
+        <!-- Event Binding -->
+        <button type="button" class="btn btn-primary" (click)="btnClickHandler($event)">Click Me!</button><br>
+
+        <!-- Two Way Binding -->
+        <input type="text" value="{{devName}}"><br>
+        <input type="text" [value]="devName"><br>
+        <input type="text" [(ngModel)]="devName"><br>
+
+    </div>
+    <div class="tab-pane fade" id="directives" role="tabpanel" aria-labelledby="directives-tab">
+        <h1>Directives</h1>
+        <h2>Structural Directives</h2>
+
+        <p>*ngIf</p>
+        <div class="alert alert-success" *ngIf="isAuth; else notauthbox">
+            Log in success
+        </div>
+        <!-- <div class="alert alert-danger" *ngIf="!isAuth">
+            not authenticated
+        </div> -->
+        <ng-template #notauthbox>
+            <div class="alert alert-danger">
+            not authenticated
+            </div>
+        </ng-template>
+
+        <p>*ngFor</p>
+        <ul>
+            <li *ngFor="let skill of skillList">{{skill}}</li>
+        </ul>
+        <!-- find index in *ngFor
+        ngSwitch -->
+    </div>
+</div>
